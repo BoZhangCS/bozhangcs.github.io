@@ -1,0 +1,16 @@
+journal_reviews:
+  - name: "CCF Transactions on Pervasive Computing and Interaction"
+    abbr: "TPCI"
+    years: ["2025"]
+
+#conference_services:
+#  - role: "Program Committee Chair"
+#    conference: "IEEE International Conference on Computer Communications"
+#    abbr: "INFOCOM"
+#    year: "2024"
+
+#editorial_boards:
+#  - role: "Associate Editor"
+#    journal: "IEEE Security & Privacy Magazine"
+#    abbr: "S&P"
+#    period: "2023-present"

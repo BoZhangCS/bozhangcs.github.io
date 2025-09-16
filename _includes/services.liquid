@@ -1,0 +1,97 @@
+<!-- Services section -->
+{% if site.data.services %}
+  {% assign services = site.data.services %}
+
+  <!-- Editorial Boards -->
+  {% if services.editorial_boards and services.editorial_boards.size > 0 %}
+    <div class="service-category">
+      <h4><strong>Editorial Boards</strong></h4>
+      <ul class="service-list">
+        {% for service in services.editorial_boards %}
+          <li>
+            <strong>{{ service.role }}</strong> -
+            {{ service.journal }}
+            {% if service.abbr %}<em>({{ service.abbr }})</em>{% endif %}
+            {% if service.period %}, {{ service.period }}{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <!-- Conference Services -->
+  {% if services.conference_services and services.conference_services.size > 0 %}
+    <div class="service-category">
+      <h4><strong>Conference Services</strong></h4>
+      <ul class="service-list">
+        {% for service in services.conference_services %}
+          <li>
+            <strong>{{ service.role }}</strong> -
+            {{ service.conference }}
+            {% if service.abbr %}<em>({{ service.abbr }})</em>{% endif %}
+            {% if service.year %}, {{ service.year }}{% endif %}
+            {% if service.years and service.years.size > 0 %}
+              , {{ service.years | join: ", " }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <!-- Journal Reviews -->
+  {% if services.journal_reviews and services.journal_reviews.size > 0 %}
+    <div class="service-category">
+      <h4><strong>Journal Reviews</strong></h4>
+      <ul class="service-list">
+        {% for journal in services.journal_reviews %}
+          <li>
+            {{ journal.name }}
+            {% if journal.abbr %}<em>({{ journal.abbr }})</em>{% endif %}
+            {% if journal.years and journal.years.size > 0 %}
+              - {{ journal.years | join: ", " }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endif %}
+
+<style>
+.service-category {
+  margin-bottom: 1.5rem;
+}
+
+.service-category h4 {
+  margin-bottom: 0.75rem;
+  color: var(--global-text-color);
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 0.25rem;
+}
+
+.service-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.service-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.service-list li:before {
+  content: "•";
+  color: var(--global-theme-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.service-list em {
+  color: var(--global-text-color-light);
+  font-size: 0.9em;
+}
+</style>

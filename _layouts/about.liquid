@@ -58,6 +58,16 @@ layout: default
       </div>
     {% endif %}
 
+    <!-- Services -->
+    {% if site.data.services %}
+      <div class="about-section">
+        <h2 style="margin-top: 1em;">
+          <strong>Services</strong>
+        </h2>
+        {% include services.liquid %}
+      </div>
+    {% endif %}
+
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
