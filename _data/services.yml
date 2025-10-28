@@ -3,6 +3,12 @@ journal_reviews:
     abbr: "TPCI"
     years: ["2025"]
 
+  - name: "IEEE Transactions on Services Computing"
+    abbr: "TSC"
+    years: [ "2025" ]
+
+
+
 #conference_services:
 #  - role: "Program Committee Chair"
 #    conference: "IEEE International Conference on Computer Communications"
