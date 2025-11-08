@@ -1,19 +1,19 @@
-journal_reviews:
-  - name: "CCF Transactions on Pervasive Computing and Interaction"
+journal_service:
+  - role: "[Reviewer]"
+    name: "CCF Transactions on Pervasive Computing and Interaction"
     abbr: "TPCI"
     years: ["2025"]
 
-  - name: "IEEE Transactions on Services Computing"
+  - role: "[Reviewer]"
+    name: "IEEE Transactions on Services Computing"
     abbr: "TSC"
-    years: [ "2025" ]
+    years: ["2025"]
 
-
-
-#conference_services:
-#  - role: "Program Committee Chair"
-#    conference: "IEEE International Conference on Computer Communications"
-#    abbr: "INFOCOM"
-#    year: "2024"
+conference_services:
+  - role: "[Artifact Evaluation Committee]"
+    conference: "USENIX Security Symposium"
+    abbr: "USENIX Security"
+    years: ["2026"]
 
 #editorial_boards:
 #  - role: "Associate Editor"

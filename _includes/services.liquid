@@ -39,17 +39,18 @@
     </div>
   {% endif %}
 
-  <!-- Journal Reviews -->
-  {% if services.journal_reviews and services.journal_reviews.size > 0 %}
+  <!-- Journal Service -->
+  {% if services.journal_service and services.journal_service.size > 0 %}
     <div class="service-category">
-      <h4><strong>Journal Reviews</strong></h4>
+      <h4><strong>Journal Service</strong></h4>
       <ul class="service-list">
-        {% for journal in services.journal_reviews %}
+        {% for journal in services.journal_service %}
           <li>
+            <strong>{{ journal.role }}</strong> -
             {{ journal.name }}
             {% if journal.abbr %}<em>({{ journal.abbr }})</em>{% endif %}
             {% if journal.years and journal.years.size > 0 %}
-              - {{ journal.years | join: ", " }}
+              , {{ journal.years | join: ", " }}
             {% endif %}
           </li>
         {% endfor %}
