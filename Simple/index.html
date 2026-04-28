@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bo Zhang - Simple Home</title>
+
+    <!-- Basic styles (reuse existing assets for similar look) -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/academicons.min.css" />
+    <link rel="stylesheet" href="/assets/css/scholar-icons.css" />
+    <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css" id="highlight_theme_light" />
+    <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css" id="highlight_theme_dark" media="none" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <link rel="shortcut icon" href="/assets/img/study.png" />
+
+    <!-- Theme script (for light / dark toggle) -->
+    <script src="/assets/js/theme.js"></script>
+    <script>
+      // Initialize theme if script is available
+      if (typeof initTheme === "function") {
+        initTheme();
+      }
+      (function () {
+        try {
+          var theme = localStorage.getItem("theme");
+          if (theme === "dark" || theme === "light") {
+            document.documentElement.setAttribute("data-theme", theme);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body class="fixed-top-nav">
+    <!-- Simple Header / Navbar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/Simple/index.html">Bo Zhang</a>
+
+        <button
+          class="navbar-toggler collapsed ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item active">
+              <a class="nav-link" href="/Simple/index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Simple/index.html#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Simple/publications.html">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Simple/cv.html">Resume</a>
+            </li>
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="ti ti-moon-filled" id="light-toggle-dark" style="display: none;"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light" style="display: none;"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5" role="main" style="max-width: 900px;">
+      <!-- About Section -->
+      <section class="mt-5 pt-4">
+        <h1 class="font-weight-bold">Bo ZHANG (张博)</h1>
+        <p class="gray-text">
+          Simple static version of the homepage. You can directly edit this HTML file to update your bio and links.
+        </p>
+
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <img
+              src="/assets/img/prof_pic.jpg"
+              class="img-fluid z-depth-1 rounded"
+              alt="Profile picture"
+            />
+            <div class="mt-3 small text-muted">
+              <div><strong>Affiliation</strong></div>
+              <div>School of Computer Science</div>
+              <div>Northwestern Polytechnical University</div>
+              <div>SEA, USA / Xi'an, China</div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <p>
+              Bo Zhang is a Ph.D. student at the School of Computer Science, Northwestern Polytechnical University.
+              His research interests include <strong>privacy computing and system security</strong>.
+            </p>
+            <p>
+              This section is intentionally simple. To modify it, search for the `<section>` with
+              comment "<strong>About Section</strong>" in `Simple/index.html` and edit the text.
+            </p>
+            <p>
+              Example links:
+              <a href="mailto:bo.zhang@nwpu.edu.cn">Email</a> ·
+              <a href="https://github.com/BoZhangCS" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+              <a href="https://scholar.google.com/citations?user=ILlvovoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- News Section -->
+      <section id="news" class="mt-5">
+        <h2><strong>News</strong></h2>
+        <p class="text-muted">
+          This is a very lightweight news list. Each item is just a date and a sentence.
+        </p>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <span class="text-monospace text-muted">2025-12-08</span> –
+            One paper accepted by <strong>IEEE INFOCOM 2026</strong>.
+          </li>
+          <li class="mb-2">
+            <span class="text-monospace text-muted">2025-06-24</span> –
+            Collaboration paper accepted by <strong>IEEE TDSC 2025</strong>.
+          </li>
+          <li class="mb-2">
+            <span class="text-monospace text-muted">2025-01-24</span> –
+            Paper accepted by <strong>USENIX Security 2025</strong>.
+          </li>
+          <!-- To add more news, just copy one <li> block above and change the text. -->
+        </ul>
+      </section>
+
+      <!-- Selected Publications (very simple preview) -->
+      <section class="mt-5">
+        <h2>
+          <strong>Selected Publications</strong>
+          <a href="/Simple/publications.html" style="font-size: 0.8em;">(full list)</a>
+        </h2>
+        <ol>
+          <li>
+            <strong>O-TSN: Enabling Oblivious Traffic Switch for Time-Sensitive Networking.</strong><br />
+            IEEE INFOCOM, 2026.
+          </li>
+          <li>
+            <strong>V-ORAM: A Versatile and Adaptive ORAM Framework with Service Transformation for Dynamic Workloads.</strong><br />
+            USENIX Security, 2025.
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="mt-5 mb-4 text-center text-muted small">
+      &copy; Bo Zhang. Simple static version.
+    </footer>
+
+    <!-- Basic scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
